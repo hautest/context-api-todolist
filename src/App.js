@@ -1,5 +1,13 @@
+import { Display } from "./DIsplay";
+import { Form } from "./Form";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Form />
+      <Display />
+    </div>
+  );
 }
 
 export default App;
