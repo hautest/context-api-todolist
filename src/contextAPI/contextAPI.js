@@ -1,13 +1,14 @@
 import { createContext, useState } from "react";
+import { Context } from "./Context";
 
 const ContextAPI = createContext({ inputValue: "", setInputValue: () => {} });
 
-function ContextProvider({ children }) {
+function ContextProvider() {
   const [inputValue, setInputValue] = useState("");
 
   return (
     <ContextAPI.Provider value={{ inputValue, setInputValue }}>
-      {children}
+      <Context />
     </ContextAPI.Provider>
   );
 }
