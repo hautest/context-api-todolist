@@ -6,6 +6,7 @@ const ContextAPI = createContext({ inputValue: "", setInputValue: () => {} });
 
 function Context() {
   const [inputValue, setInputValue] = useState("");
+  console.log("Context 렌더링");
   return (
     <ContextAPI.Provider value={{ inputValue, setInputValue }}>
       <Input />
