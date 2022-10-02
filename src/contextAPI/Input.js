@@ -1,4 +1,4 @@
-import { ContextAPI } from "./contextAPI";
+import { ContextAPI } from "./Context";
 import { useContext } from "react";
 
 export function Input() {

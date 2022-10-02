@@ -1,12 +1,17 @@
-import { Input } from "./Input";
+import { createContext, useState } from "react";
 import { Content } from "./Content";
+import { Input } from "./Input";
 
-export function Context() {
-  console.log("context component 렌더링");
+const ContextAPI = createContext({ inputValue: "", setInputValue: () => {} });
+
+function Context() {
+  const [inputValue, setInputValue] = useState("");
   return (
-    <div>
+    <ContextAPI.Provider value={{ inputValue, setInputValue }}>
       <Input />
       <Content />
-    </div>
+    </ContextAPI.Provider>
   );
 }
+
+export { ContextAPI, Context };
